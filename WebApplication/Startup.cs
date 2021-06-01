@@ -58,7 +58,7 @@ namespace WebApplication
 
 
             services.AddControllersWithViews();
-            services.AddCoreAdmin();
+            // services.AddCoreAdmin();
             services.AddCronJob<SubscriptionCheckerJob>(c =>
             {
                 c.TimeZoneInfo = TimeZoneInfo.Local;

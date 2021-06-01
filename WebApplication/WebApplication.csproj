@@ -6,7 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CoreAdmin" Version="1.2.0" />
       <PackageReference Include="bootstrap" Version="5.0.0-beta3" />
       <PackageReference Include="Cronos" Version="0.7.0" />
       <PackageReference Include="MailKit" Version="2.11.1" />
