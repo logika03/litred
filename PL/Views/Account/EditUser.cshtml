@@ -1,0 +1,40 @@
+﻿@model PL.ViewModels.User.EditUserViewModel
+@section Navbar{
+    @await Html.PartialAsync("../Partials/AccountNavbar", Model.Id)
+}
+
+<h2>Ваши данные</h2>
+<h4>@Model.Email</h4>
+<form asp-action="EditUser" asp-controller="Account" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @{
+        var imageName = (Model.ImagePath is null || Model.ImagePath.Length == 0) ? "default.jpg" : Model.ImagePath;
+        var imagePath = $"../../media/users/{imageName}";
+    }
+
+    <img src="@imagePath" width="100" height="100" />
+    <label asp-for="Image" class="text-center mt-1" id="img_label" type="button">
+        изменить
+        <input asp-for="Image" name="image" id="avatar" type="file" accept="image/*,image/png,image/jpeg" />
+    </label>
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control" value="@Model.LastName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control" value="@Model.FirstName" />
+    </div>
+    <div class="form-group">
+        <label asp-for="OldPassword" class="control-label"></label>
+        <input asp-for="OldPassword" class="form-control" placeholder="Текущий пароль" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="NewPassword" class="control-label"></label>
+        <input asp-for="NewPassword" class="form-control" placeholder="Новый пароль" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-default" />
+    </div>
+</form>

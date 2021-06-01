@@ -1,0 +1,19 @@
+﻿@model PL.ViewModels.Book.BookViewModel
+@{ Layout = null; }
+@{
+    var imageName = (Model.Book.BookCover is null || Model.Book.BookCover.Length == 0) ? "default.jpg" : Model.Book.BookCover;
+    var imagePath = $@"media/books/{imageName}";
+}
+<div>
+    <img src="~/@imagePath" width="200" height="300" alt="Photo of book"/>
+    <p>@Model.ReadingStatus</p>
+    <a asp-action="Book" asp-controller="Book" asp-route-id="@Model.Book.Id"> <h4>@Model.Book.Title</h4></a>
+    <ul>
+        @foreach (var author in Model.Book.Authors)
+        {
+            <li>@author.FirstName @author.LastName</li>
+        }
+    </ul>
+    <h4>@Model.Book.Rating</h4>
+    <p>@Model.Book.SubscriptionType.Description</p>
+</div>

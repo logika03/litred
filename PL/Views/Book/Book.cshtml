@@ -1,0 +1,90 @@
+﻿@model PL.ViewModels.Book.BookViewModel
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+@section Navbar{
+    @await Html.PartialAsync("../Partials/AccountNavbar", Model.UserId)
+}
+}
+
+@{
+    var imageName = (Model.Book.BookCover is null || Model.Book.BookCover.Length == 0) ? "default.jpg" : Model.Book.BookCover;
+    var imagePath = $@"media/books/{imageName}";
+}
+<img src="~/@imagePath" width="200" height="300"></img>
+@if (!string.IsNullOrEmpty(@Model.ReadingStatus))
+{
+    @Model.ReadingStatus
+}
+@{
+    var subscriptionType = @Model.Book.SubscriptionType;
+}
+<p>@subscriptionType.Description</p>
+<p>@Model.Book.Rating</p>
+<h4>@Model.Book.Title</h4>
+@foreach (var author in Model.Book.Authors)
+{
+    <p>@author.FirstName @author.LastName</p>
+}
+<p>@Model.Book.PublicationYear</p>
+<h5>О книге</h5>
+<p>@Model.Book.Description</p>
+<h5>Жанры</h5>
+@foreach (var genre in Model.Book.Genres)
+{
+    <p>@genre.Description</p>
+}
+<h5>Темы</h5>
+@foreach (var theme in Model.Book.Themes)
+{
+    <p>@theme.Description</p>
+}
+<h5>Правообладатель</h5>
+@foreach (var copyrightHolder in Model.Book.CopyrightHolders)
+{
+    <p>@copyrightHolder.Description</p>
+}
+<h5>Отзывы</h5>
+@foreach (var review in Model.Book.Reviews)
+{
+    @await Html.PartialAsync("~/Views/Partials/Review.cshtml", review);
+    
+    <div id="chatroom"></div>
+}
+<h5>Переводчик</h5>
+@foreach (var translator in Model.Book.Translators)
+{
+    <p>@translator.FirstName @translator.LastName</p>
+}
+
+@if (@Model.UserId is null)
+{
+    <p>Для чтения книг необходима регистрация</p>
+}
+
+
+else if (@Model.Book.SubscriptionType.CompareTo(@Model.UserSubscriptionType) <= 0)
+{
+    <a asp-controller="Book" asp-action="TextBook" asp-route-id="@Model.Book.Id">Начать читать</a>
+}
+
+else
+{
+    <p>Эта книга не доступна с вашей подпиской</p>
+}
+@if (User.Identity != null && User.Identity.IsAuthenticated && @Model.Book.Reviews.All(r => r.Author.Id != @Model.UserId))
+{
+    <h3>Оставить комментарий</h3>
+    <div id="inputForm">
+        <input type="text" id="message"/>
+        <input type="number" id="rating"/>
+        <input type="text" id="book" value="@Model.Book.Id" hidden>
+        <input type="text" id="username" value="@Model.Username" hidden>
+        <input type="button" id="sendBtn" value="Отправить"/>
+    </div>
+}
+
+@section Scripts
+{
+    <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/js/signalr/sendComment.js"></script>
+}

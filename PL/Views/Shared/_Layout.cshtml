@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - LitRead </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body style=" background-color: #F7F7F7 ">
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-whit border-bottom box-shadow mb-3">
+        <div class="container">
+            <span class="badge bg-warning text-dark">
+                <svg width="2em" height="2em" viewBox="0 0 18 18" class="bi bi-book" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <a href="">
+                        <path fill-rule="evenodd" d="M3.214 1.072C4.813.752 6.916.71 8.354 2.146A.5.5 0 0 1 8.5 2.5v11a.5.5 0 0 1-.854.354c-.843-.844-2.115-1.059-3.47-.92-1.344.14-2.66.617-3.452 1.013A.5.5 0 0 1 0 13.5v-11a.5.5 0 0 1 .276-.447L.5 2.5l-.224-.447.002-.001.004-.002.013-.006a5.017 5.017 0 0 1 .22-.103 12.958 12.958 0 0 1 2.7-.869zM1 2.82v9.908c.846-.343 1.944-.672 3.074-.788 1.143-.118 2.387-.023 3.426.56V2.718c-1.063-.929-2.631-.956-4.09-.664A11.958 11.958 0 0 0 1 2.82z"/>
+                        <path fill-rule="evenodd" d="M12.786 1.072C11.188.752 9.084.71 7.646 2.146A.5.5 0 0 0 7.5 2.5v11a.5.5 0 0 0 .854.354c.843-.844 2.115-1.059 3.47-.92 1.344.14 2.66.617 3.452 1.013A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.276-.447L15.5 2.5l.224-.447-.002-.001-.004-.002-.013-.006-.047-.023a12.582 12.582 0 0 0-.799-.34 12.96 12.96 0 0 0-2.073-.609zM15 2.82v9.908c-.846-.343-1.944-.672-3.074-.788-1.143-.118-2.387-.023-3.426.56V2.718c1.063-.929 2.631-.956 4.09-.664A11.956 11.956 0 0 1 15 2.82z"/>
+                    </a>
+                </svg>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <label>
+                        LitRead
+                    </label>
+                </a>
+            </span>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <form action="" method="post" class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Книга или автор" aria-label="Search">
+                </form>
+            </div>
+            @if (IsSectionDefined("Navbar"))
+            {
+                @RenderSection("Navbar")
+            }
+            else
+            {
+                <a asp-controller="Auth" asp-action="Login">Войти</a>
+            }
+
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+
+    </main>
+</div>
+<footer class="container">
+    <div class="row">
+        <div class="col-md-6 footerLeft">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footerBlockTitle">
+                        <b>О проекте</b>
+                    </div>
+                    <div class="footerBlockContext">
+                        <a href="#" style="color: rgb(179, 77, 0);">Правовая информация </a>
+                    </div>
+                    <div class="footerBlockContext">
+                        <a href="#" style="color: rgb(179, 77, 0) ;">Настройки </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footerBlockTitle">
+                        <b> О подписке </b>
+                    </div>
+                    <div class="footerBlockContext">
+                        <a href="#" style="color: rgb(179, 77, 0);">Купить подписку </a>
+                    </div>
+                    <div class="footerBlockContext">
+                        <a href="#" style="color: rgb(179, 77, 0);">Подарить подписку </a>
+                    </div>
+                    <div class="footerBlockContext">
+                        <a href="#" style="color: rgb(179, 77, 0);">FAQ </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 footerRight">
+            <div class="footerBlockTitle">
+                <b>Карты</b>
+            </div>
+            <div class="footerBlockContext">Visa,Mastercard</div>
+        </div>
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.2/CSSRulePlugin.min.js"></script> -->
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

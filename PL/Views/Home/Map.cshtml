@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Местоположение";
+}
+<h2>Посмотрите карту</h2>
+<div id="map" style="height: 400px; width: 600px;">map stuff</div>
+
+
+@section Scripts
+{
+    <script src="~/js/maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByCBmQb4_fJn36Ca6At3fI5Lsid25l0wY&callback=initMap"
+            type="text/javascript"></script>
+}

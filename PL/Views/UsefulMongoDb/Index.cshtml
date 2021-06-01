@@ -1,0 +1,50 @@
+﻿@model PL.ViewModels.UsefulMongoDb.IndexViewModel
+ 
+@{
+    ViewData["Title"] = "Список товаров";
+}
+ 
+<h2>@ViewData["Title"]</h2>
+<form method="get">
+    <div class="form-group">
+        <label for="Filter.Name">Поиск по соответствию</label>
+        <input type="text" name="Filter.Name" value="@Model.Filter.Name" class="form-control"  />
+    </div>
+    <div class="form-group">
+        <label for="Filter.MinPrice">Минимальная цена</label>
+        <input type="number" name="Filter.MinPrice" value="@Model.Filter.MinPrice" class="form-control"  />
+    </div>
+    <div class="form-group">
+        <label for="Filter.MaxPrice">Максимальная цена</label>
+        <input type="number" name="Filter.MaxPrice" value="@Model.Filter.MaxPrice" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Поиск" class="btn btn-outline-secondary" />
+    </div>
+</form>
+ 
+<p>
+    <a asp-controller="UsefulMongoDb" asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>Модель</th>
+        <th>Производитель</th>
+        <th>Цена</th>
+        <th></th>
+    </tr>
+ 
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Company</td>
+            <td>
+                @item.Price.ToString("c")
+            </td>
+            <td>
+                <a asp-controller="UsefulMongoDb" asp-action="Delete" asp-route-id="@item.Id">Удалить</a> |
+            </td>
+        </tr>
+    }
+</table>

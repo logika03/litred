@@ -1,0 +1,271 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+      <UserSecretsId>f92e1776-4f73-4282-97dd-898aea0f2b68</UserSecretsId>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="appsettings.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css">
+        <Link>wwwroot\css\bootstrap-grid.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map">
+        <Link>wwwroot\css\bootstrap-grid.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css">
+        <Link>wwwroot\css\bootstrap-grid.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map">
+        <Link>wwwroot\css\bootstrap-grid.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css">
+        <Link>wwwroot\css\bootstrap-grid.rtl.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.css.map">
+        <Link>wwwroot\css\bootstrap-grid.rtl.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css">
+        <Link>wwwroot\css\bootstrap-grid.rtl.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-grid.rtl.min.css.map">
+        <Link>wwwroot\css\bootstrap-grid.rtl.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css">
+        <Link>wwwroot\css\bootstrap-reboot.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map">
+        <Link>wwwroot\css\bootstrap-reboot.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css">
+        <Link>wwwroot\css\bootstrap-reboot.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map">
+        <Link>wwwroot\css\bootstrap-reboot.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css">
+        <Link>wwwroot\css\bootstrap-reboot.rtl.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.css.map">
+        <Link>wwwroot\css\bootstrap-reboot.rtl.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css">
+        <Link>wwwroot\css\bootstrap-reboot.rtl.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.rtl.min.css.map">
+        <Link>wwwroot\css\bootstrap-reboot.rtl.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css">
+        <Link>wwwroot\css\bootstrap-utilities.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.css.map">
+        <Link>wwwroot\css\bootstrap-utilities.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css">
+        <Link>wwwroot\css\bootstrap-utilities.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.min.css.map">
+        <Link>wwwroot\css\bootstrap-utilities.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css">
+        <Link>wwwroot\css\bootstrap-utilities.rtl.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.css.map">
+        <Link>wwwroot\css\bootstrap-utilities.rtl.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css">
+        <Link>wwwroot\css\bootstrap-utilities.rtl.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap-utilities.rtl.min.css.map">
+        <Link>wwwroot\css\bootstrap-utilities.rtl.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.css">
+        <Link>wwwroot\css\bootstrap.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.css.map">
+        <Link>wwwroot\css\bootstrap.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.min.css">
+        <Link>wwwroot\css\bootstrap.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map">
+        <Link>wwwroot\css\bootstrap.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css">
+        <Link>wwwroot\css\bootstrap.rtl.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.css.map">
+        <Link>wwwroot\css\bootstrap.rtl.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css">
+        <Link>wwwroot\css\bootstrap.rtl.min.css</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\css\bootstrap.rtl.min.css.map">
+        <Link>wwwroot\css\bootstrap.rtl.min.css.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js">
+        <Link>wwwroot\js\bootstrap.bundle.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map">
+        <Link>wwwroot\js\bootstrap.bundle.js.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js">
+        <Link>wwwroot\js\bootstrap.bundle.min.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map">
+        <Link>wwwroot\js\bootstrap.bundle.min.js.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.esm.js">
+        <Link>wwwroot\js\bootstrap.esm.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.esm.js.map">
+        <Link>wwwroot\js\bootstrap.esm.js.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js">
+        <Link>wwwroot\js\bootstrap.esm.min.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.esm.min.js.map">
+        <Link>wwwroot\js\bootstrap.esm.min.js.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.js">
+        <Link>wwwroot\js\bootstrap.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.js.map">
+        <Link>wwwroot\js\bootstrap.js.map</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.min.js">
+        <Link>wwwroot\js\bootstrap.min.js</Link>
+      </Content>
+      <Content Include="C:\Users\user\.nuget\packages\bootstrap\5.0.0-beta3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map">
+        <Link>wwwroot\js\bootstrap.min.js.map</Link>
+      </Content>
+      <Content Include="libman.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Include="Views\Account\EditUser.cshtml" />
+      <Content Include="Views\Account\Home.cshtml" />
+      <Content Include="Views\Account\UserBooks.cshtml" />
+      <Content Include="Views\Auth\Login.cshtml" />
+      <Content Include="Views\Auth\Register.cshtml" />
+      <Content Include="Views\Book\Book.cshtml" />
+      <Content Include="Views\Home\Index.cshtml" />
+      <Content Include="Views\Home\Map.cshtml" />
+      <Content Include="Views\Home\Privacy.cshtml" />
+      <Content Include="Views\Partials\AccountNavbar.cshtml" />
+      <Content Include="Views\Partials\BookDescription.cshtml" />
+      <Content Include="Views\Partials\Review.cshtml" />
+      <Content Include="Views\Partials\Subscription.cshtml" />
+      <Content Include="Views\Partials\TextConfirmEmail.cshtml" />
+      <Content Include="Views\Partials\UserBooks.cshtml" />
+      <Content Include="Views\Roles\Create.cshtml" />
+      <Content Include="Views\Roles\Edit.cshtml" />
+      <Content Include="Views\Roles\Index.cshtml" />
+      <Content Include="Views\Roles\UserList.cshtml" />
+      <Content Include="Views\Shared\Error.cshtml" />
+      <Content Include="Views\Shared\_Layout.cshtml" />
+      <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+      <Content Include="Views\Subscription\Home.cshtml" />
+      <Content Include="Views\Subscription\SubscriptionPage.cshtml" />
+      <Content Include="Views\Subscription\UserSubscription.cshtml" />
+      <Content Include="Views\UsefulMongoDb\Create.cshtml" />
+      <Content Include="Views\UsefulMongoDb\Index.cshtml" />
+      <Content Include="Views\Users\Create.cshtml" />
+      <Content Include="Views\Users\Edit.cshtml" />
+      <Content Include="Views\Users\Index.cshtml" />
+      <Content Include="Views\_ViewImports.cshtml" />
+      <Content Include="Views\_ViewStart.cshtml" />
+      <Content Include="wwwroot\css\site.css" />
+      <Content Include="wwwroot\documents\file.pdf" />
+      <Content Include="wwwroot\favicon.ico" />
+      <Content Include="wwwroot\img\book\Выйтииз зоныдискомфорта.jpg" />
+      <Content Include="wwwroot\img\book\Мертвыедуши.jpe" />
+      <Content Include="wwwroot\img\book\Отцыидети.jpg" />
+      <Content Include="wwwroot\img\chicago.jpg" />
+      <Content Include="wwwroot\img\la.jpg" />
+      <Content Include="wwwroot\img\ny.jpg" />
+      <Content Include="wwwroot\js\maps.js" />
+      <Content Include="wwwroot\js\signalr\dist\browser\signalr.min.js" />
+      <Content Include="wwwroot\js\signalr\sendComment.js" />
+      <Content Include="wwwroot\js\site.js" />
+      <Content Include="wwwroot\js\userBooks.js" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+      <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+      <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+      <Content Include="wwwroot\lib\bootstrap\LICENSE" />
+      <Content Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+      <Content Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+      <Content Include="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+      <Content Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+      <Content Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+      <Content Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+      <Content Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+      <Content Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+      <Content Include="wwwroot\lib\jquery\dist\jquery.js" />
+      <Content Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+      <Content Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+      <Content Include="wwwroot\lib\jquery\LICENSE.txt" />
+      <Content Include="wwwroot\media\books\default.jpg" />
+      <Content Include="wwwroot\media\chicago.jpg" />
+      <Content Include="wwwroot\media\la.jpg" />
+      <Content Include="wwwroot\media\ny.jpg" />
+      <Content Include="wwwroot\media\users\default.jpg" />
+      <Content Include="wwwroot\media\users\enemy.png" />
+      <Content Include="wwwroot\media\users\FwHe76AhsKc.jpg" />
+      <Content Include="wwwroot\media\users\map.jpg" />
+      <Content Include="wwwroot\media\users\sign.png" />
+      <Content Include="wwwroot\media\users\голубь.jpg" />
+      <Content Include="wwwroot\media\Выйти из зоны дискомфорта.jpg" />
+      <Content Include="wwwroot\media\Мёртвые души.jpg" />
+      <Content Include="wwwroot\media\Мертвые души.jpe" />
+      <Content Include="wwwroot\media\Отцы и дети.jpg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BLL\BLL.csproj" />
+      <ProjectReference Include="..\DAL\DAL.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MailKit" Version="2.12.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.6" />
+      <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.0-preview.4.21253.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-preview.4.21253.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.4.21253.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.4.21253.1">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0-preview4" />
+    </ItemGroup>
+
+</Project>
