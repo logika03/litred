@@ -1,0 +1,17 @@
+﻿@model WebApplication.ViewModels.Subscription.SubscriptionViewModel
+
+
+@section Navbar{
+    @await Html.PartialAsync("~/Views/Partials/AccountNavbar.cshtml", Model.UserId)
+}
+
+@if (@Model.Subscription is null)
+{
+    <h2>У вас нет активных подписок</h2>
+}
+else
+{
+    <h2>@Model.Subscription.SubscriptionType.Description</h2>
+    <p>Ваша подписка активна до @Model.Subscription.EndDate.ToString("dd.MM.yyyy")</p>
+}
+<a asp-controller="Subscription" asp-action="Home">Купить подписку</a>

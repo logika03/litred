@@ -1,0 +1,48 @@
+﻿@using WebApplication.ViewModels
+@using WebApplication.Enums
+@model WebApplication.ViewModels.UserBooksViewModel
+
+@section Navbar{
+    @await Html.PartialAsync("~/Views/Partials/AccountNavbar.cshtml", Model.UserId)
+}
+
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownBooks" data-toggle="dropdown" aria-expanded="false">
+        Выберите
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownBooks">
+        <li>
+            <a id="all" class="dropdown-item books" href="#">Все</a>
+        </li>
+        <li>
+            <a id="wantToRead" class="dropdown-item books" href="#">Хочу прочитать</a>
+        </li>
+        <li>
+            <a id="reading" class="dropdown-item books" href="#">Читаю</a>
+        </li>
+        <li>
+            <a id="read" class="dropdown-item books" href="#">Прочитано</a>
+        </li>
+    </ul>
+</div>
+<div id="all-books" class="books-content">
+    @foreach (var viewBook in Model.Books)
+    {
+        @await Html.PartialAsync("~/Views/Partials/BookDescription.cshtml", viewBook)
+        ;
+    }
+</div>
+
+@await Html.PartialAsync("~/Views/Partials/UserBooks.cshtml",
+    new UserBookPartialsViewModel("wantToRead-books", ReadingStatusEnum.WantToRead, true, Model.Books)
+    )
+@await Html.PartialAsync("~/Views/Partials/UserBooks.cshtml",
+    new UserBookPartialsViewModel("read-books", ReadingStatusEnum.Read, true, Model.Books)
+    )
+@await Html.PartialAsync("~/Views/Partials/UserBooks.cshtml",
+    new UserBookPartialsViewModel("reading-books", ReadingStatusEnum.Reading, true, Model.Books)
+    )
+
+@section Scripts
+{<script src="~/js/userBooks.js"></script>}

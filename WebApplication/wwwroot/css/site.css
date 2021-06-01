@@ -1,0 +1,125 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #d96500;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+header {
+    position: fixed;
+    width: 119px;
+    height: 0px;
+    left: 1396px;
+    top: 77px;
+    background: #595959;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: #F7F7F7;
+}
+form {
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    padding-right: 12px;
+    padding-left: 12px;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+.mt-md-0 {
+    margin-top: 0 !important;
+}
+.form-inline {
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.footerLeft {
+    color: #ffc107;
+}
+.footerRight {
+    color: black;
+}
+
+.footerBlockTitle {
+    color:black ;
+}
+.footerBlockContext {
+    color: #ffc107;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+    position: relative;
+    box-sizing:border-box;
+}
+carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+a.btn btn-secondary {
+    box-shadow: none;
+    border: 2px none;
+    text-shadow: none;
+}
+
+

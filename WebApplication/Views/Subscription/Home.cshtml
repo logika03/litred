@@ -1,0 +1,15 @@
+﻿@model WebApplication.ViewModels.Subscription.SubscriptionsViewModel
+
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+    @section Navbar{
+        @await Html.PartialAsync("~/Views/Partials/AccountNavbar.cshtml", Model.UserId)
+    }
+}
+
+@foreach (var subscriptionType in Model.SubscriptionTypes)
+{
+    @await Html.PartialAsync("~/Views/Partials/Subscription.cshtml", subscriptionType)
+
+    <a asp-controller="Subscription" asp-action="SubscriptionPage" asp-route-id="@subscriptionType.Id">Купить</a>
+}

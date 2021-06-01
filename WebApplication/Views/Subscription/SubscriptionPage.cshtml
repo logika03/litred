@@ -1,0 +1,31 @@
+﻿@model WebApplication.ViewModels.Subscription.SubscriptionPageViewModel
+
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+    @section Navbar{
+        @await Html.PartialAsync("~/Views/Partials/AccountNavbar.cshtml", Model.UserId)
+    }
+}
+
+@if (@Model.ExistsSubcription)
+{
+    <p>У вас уже есть текущая подписка. Действие новой подписки начнется со дня покупки</p>
+}
+
+<h2>Оформление подписки</h2>
+@await Html.PartialAsync("~/Views/Partials/Subscription.cshtml", @Model.SubscriptionType)
+<form method="post" action="">
+    <label>Номер карты <input type="text" pattern="\d*" class="form-control" maxlength="12" placeholder="**** **** **** ****"></label>
+    <label>
+        Срок действия <input type="text" pattern="\d*" class="form-control" maxlength="2" placeholder="MM">/
+        <input type="text" pattern="\d*" class="form-control" maxlength="2" placeholder="YY">
+    </label>
+    <label>
+        <input type="text" pattern="\d*" class="form-control" maxlength="3" placeholder="CVC">
+    </label>
+    <label>
+        <input type="text" class="form-control" placeholder="Фамилия Имя" name="name">
+    </label>
+    <button type="submit" class="btn" asp-controller="Subscription" asp-action="SubscriptionPage" asp-route-id="@Model.SubscriptionType.Id">Купить</button>
+    <h4>@Model.Message</h4>
+</form>

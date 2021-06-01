@@ -1,0 +1,134 @@
+@model WebApplication.ViewModels.UserViewModel
+@{ ViewData["Title"] = "Home Page"; }
+
+
+
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+@section Navbar{
+    @await Html.PartialAsync("../Partials/AccountNavbar", Model.Id)
+}
+}
+<h2>hello</h2>
+@{ ViewData["Title"] = "Home Page"; }
+
+<main role="main">
+    <div class="tegg">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="btn btn-outline-warning" href="" role="button"><!-- -->🎧 Аудиокниги</a>
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-outline-warning" href="" role="button"><!-- -->👌 Бесплатные книги</a>
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-outline-warning" href="" role="button"><!-- -->🔥 Новинки</a>
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-outline-warning" href="" role="button"><!-- -->❤️ Топ книг</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="demo" class="carousel slide my-lg-5" data-ride="carousel">
+
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/img/la.jpg" alt="Los Angeles">
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/chicago.jpg" alt="Chicago">
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/ny.jpg" alt="New York">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+    <div class="carousel-item">
+        <img src="la.jpg" alt="Los Angeles">
+        <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+        </div>
+    </div>
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="color: rgb(179, 77, 0)">
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="~/img/Отцы и дети.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>Отцы и дети</h2>
+                <p>
+                    О книге
+                    В романе «Отцы и дети» отразилась идеологическая борьба двух поколений, являвшаяся одной из главных особенностей общественной жизни 60-х годов XIX века. Роман приобрел непреходящие общечеловеческий интерес и значение.
+                    <br>
+                    <br>
+                </p>
+                <p><a class="btn btn-secondary" style="background: linear-gradient(rgb(255, 215, 84), rgb(255, 199, 44))" href="" role="button">Читать онлайн »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="~/img/Выйти из зоны дискомфорта.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>Выйти из зоны дискомфорта</h2>
+                <p>
+                    Мы часто слышим в свой адрес: «Выйди из зоны комфорта!». Но этот посыл воспринимается именно людьми, которые находятся в глубочайшем дискомфорте и хотят от него избавиться. В самом деле, если человеку хорошо, то зачем и куда ему выходить?
+
+                </p>
+                <p><a class="btn btn-secondary" href="" role="button">Читать онлайн »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="rounded-circle" src="~/img/Мертвые души.jpe" alt="Generic placeholder image" width="140" height="140">
+                <h2>Мёртвые души</h2>
+                <p>«Мертвые души» — гениальное произведение Николая Васильевича Гоголя, учебник жизни и ключ к пониманию характеров и типажей нашего общества. Сам автор определил жанр произведения как поэму. До наших дней дошел только первый том, вторая же часть произведения была уничтожена самим автором. Сюжет книги основан на реальной истории, которую Гоголю подсказал Александр Сергеевич Пушкин.</p>
+                <p><a class="btn btn-secondary" href="" role="button">Читать онлайн »</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178f08f2274%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178f08f2274%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.2828125%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178f08f227a%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178f08f227a%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.2828125%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            </div>
+        </div>
+
+
+    </div>
+</main>

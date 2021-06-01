@@ -1,0 +1,26 @@
+﻿@model string
+
+@{ Layout = null; }
+
+<div class="btn-group">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+        Личный кабинет
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li>
+            <a class="dropdown-item" asp-controller="Account" asp-action="UserBooks" asp-route-id="@Model">Мои книги</a>
+        </li>
+        <li>
+            <a class="dropdown-item" asp-controller="Subscription" asp-action="UserSubscription" asp-route-id="@Model">Подписка</a>
+        </li>
+        <li>
+            <a class="dropdown-item" asp-controller="Account" asp-action="EditUser" asp-route-id="@Model">Настройки</a>
+        </li>
+        <li>
+            <form method="post" asp-controller="Auth" asp-action="Logout">
+                <input type="submit" value="Выйти"/>
+            </form>
+        </li>
+    </ul>
+</div>

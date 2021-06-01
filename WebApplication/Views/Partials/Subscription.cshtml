@@ -1,0 +1,12 @@
+﻿@model SubscriptionType
+
+<div>
+    <h3>@Model.Description</h3>
+    <p>@Model.MonthPrice руб./месяц</p>
+    <ol>
+        @foreach (var option in Model.SubscriptionOptions)
+        {
+            <li>option</li>
+        }
+    </ol>
+</div>

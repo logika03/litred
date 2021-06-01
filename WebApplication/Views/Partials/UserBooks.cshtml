@@ -1,0 +1,11 @@
+﻿@model WebApplication.ViewModels.UserBookPartialsViewModel
+@{
+  var className= Model.IsNone ? "d-none" : "";
+}
+<div id="@Model.Id" class="books-content @className">
+    @foreach (var viewBook in Model.Books.Where(book => book.ReadingStatus == Model.ReadingStatus))
+    {
+        @await Html.PartialAsync("~/Views/Partials/BookDescription.cshtml", viewBook)
+        ;
+    }
+</div>

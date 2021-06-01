@@ -1,0 +1,13 @@
+﻿@model WebApplication.ViewModels.UserViewModel
+@if (User.Identity.IsAuthenticated)
+{
+@section Navbar{
+    @await Html.PartialAsync("~/Views/Partials/AccountNavbar.cshtml", Model.Id)
+}}
+
+<p>@User.Identity.Name</p>
+
+
+<form method="post" asp-controller="Auth" asp-action="Logout">
+    <input type="submit" value="Выйти" />
+</form>
